@@ -18,7 +18,7 @@ if(fs.existsSync(`C:/Users/${OSname}/Documents/.FallenKingdom`)){
     }
     if(fs.existsSync(`C:/Users/${OSname}/Documents/.FallenKingdom/settings.json`)){   
     }else{
-        fs.writeFileSync(`C:/Users/${OSname}/Documents/.FallenKingdom/settings.json`,JSON.stringify({email:'undefined', password:'undefined', min:512, max:4096, enableUpdate:'true', console:'false'}));
+        fs.writeFileSync(`C:/Users/${OSname}/Documents/.FallenKingdom/settings.json`,JSON.stringify({email:'undefined', password:'undefined', min:3584, max:4096, enableUpdate:'true', console:'true'}));
     }
 }else{
     fs.mkdirSync(`C:/Users/${OSname}/Documents/.FallenKingdom`);
@@ -75,7 +75,7 @@ function importSettings(){
         if(fs.existsSync(`C:/Users/${OSname}/Documents/.FallenKingdom/settings.json`)){   
             return JSON.parse(fs.readFileSync('C:/Users/'+OSname+'/Documents/.FallenKingdom/settings.json', "utf8"));
         }else{
-            fs.writeFileSync(`C:/Users/${OSname}/Documents/.FallenKingdom/settings.json`,JSON.stringify({email:'undefined', password:'undefined', min:512, max:4096, enableUpdate:'true', console:'false'}));
+            fs.writeFileSync(`C:/Users/${OSname}/Documents/.FallenKingdom/settings.json`,JSON.stringify({email:'undefined', password:'undefined', min:3584, max:4096, enableUpdate:'true', console:'true'}));
             return undefined;
         }
     }else{
@@ -88,8 +88,7 @@ function importSettings(){
 function importPacks(){
 
     if(fs.existsSync(`C:/Users/${OSname}/Documents/.FallenKingdom`)){
-        if(fs.existsSync(`C:/Users/${OSname}/Documents/.FallenKingdom`)){
-        }else{
+        if(!(fs.existsSync(`C:/Users/${OSname}/Documents/.FallenKingdom`))){
             fs.mkdirSync(`C:/Users/${OSname}/Documents/.FallenKingdom/modspacks`);
         }
         if(fs.existsSync(`C:/Users/${OSname}/Documents/.FallenKingdom/packs.json`)){   
@@ -105,6 +104,15 @@ function importPacks(){
     return undefined;
 }
 
+
+try {
+    importSettings();
+    importPacks();
+}catch(err) {
+    console.log("Loading files...");
+}
+
+try {
 ipcMain.on('launch', (event, args) => {
     if(launchable === false) return console.error('Already Executed \n Ignore this'); 
     let settings = importSettings();
@@ -171,17 +179,15 @@ ipcMain.on('launch', (event, args) => {
     consoleW.loadFile('assets/views/console.html');
 
     const launcher = new Client();
-        console.log("Launch")
-        //console.log(args);
-        //console.log(settings);
+        console.log("Launch");
         launcher.launch(opts);
         mainWindow.webContents.send('launched','true');
         launchable = "false";
-
+        
         setTimeout(() => {
             fs.writeFile(`C:/Users/${OSname}/Documents/.FallenKingdom/packs.json`, JSON.stringify(packs), (err) => {
                 if (err) console.log(err);
-                console.log("Running");
+                consoleW.webContents.send('console-output', 'Downloading assets..')
                 mainWindow.close();
             });
         },2000);
@@ -210,6 +216,9 @@ ipcMain.on('launch', (event, args) => {
 
     });
 });
+}catch(err) {
+    console.log(err.toString('utf-8'));
+}
 
 /**
  * AUTOUPDATER
@@ -254,7 +263,7 @@ autoUpdater.on('update-downloaded', () => {
             settings = JSON.parse(fs.readFileSync('C:/Users/'+OSname+'/Documents/.FallenKingdom/settings.json', "utf8"));
         }else{
             // Create Default Settings.json if not Existing
-            fs.writeFileSync(`C:/Users/${OSname}/Documents/.FallenKingdom/settings.json`,JSON.stringify({email:'undefined', password:'undefined', min:512, max:4096, enableUpdate:'true', console:'false'}));
+            fs.writeFileSync(`C:/Users/${OSname}/Documents/.FallenKingdom/settings.json`,JSON.stringify({email:'undefined', password:'undefined', min:3584, max:4096, enableUpdate:'true', console:'true'}));
         }
     }else{
         // Create Folder if Not Existing
