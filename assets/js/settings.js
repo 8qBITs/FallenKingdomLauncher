@@ -19,7 +19,7 @@ function testIfSettingsValid(s){ return typeof(s); }
 
 ipcRenderer.on('Update-Found', () => {
     let button = document.createElement('button'); 
-    button.innerHTML = "Update Verfügbar"; 
+    button.innerHTML = "Update Found"; 
     button.classList.add('modItem');
     button.setAttribute("id","update");
 
@@ -41,8 +41,8 @@ if(s_status === undefined){
     let password = document.getElementById('password');
     let s_ram = document.getElementById('min-ram');
     let x_ram = document.getElementById('max-ram');
-    let s_patcher = "true";
-    let s_console = "true";
+    let s_patcher = true;
+    let s_console = document.getElementById('console');
     
     email.value = settings.email;
     password.value = settings.password;

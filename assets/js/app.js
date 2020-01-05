@@ -26,7 +26,7 @@ for(let i = 0; i < pack_list.length; i++){
 
     modItem.addEventListener('click', () => {
         selected = modItem.dataset.mp_id;
-        modbody.innerHTML = "<h2>"+pack_list[selected].name+"</h2>"+"<small style=\"color: grey;\">Pack Version: "+pack_list[selected].packVersion+"</small><br><small style=\"color: grey;\">Empfohlener Ram: "+pack_list[selected].recommended+"</small><br>"+pack_list[selected].launcherBody;
+        modbody.innerHTML = "<h2>"+pack_list[selected].name+"</h2>"+"<small style=\"color: white;\">Pack Version: "+pack_list[selected].packVersion+"</small><br><small style=\"color: white;\">Recommended Ram: "+pack_list[selected].recommended+"</small><br>"+pack_list[selected].launcherBody;
         console.log(selected);
     });
 
@@ -43,10 +43,9 @@ for(let i = 0; i < pack_list.length; i++){
     modItem.setAttribute("id","mp");
     modItem.dataset.mp_id = i;
 
-    modbody.innerHTML = "<h2>"+pack_list[selected].name+"</h2>"+"<small style=\"color: grey;\">Pack Version: "+pack_list[selected].packVersion+"</small><br><small style=\"color: grey;\">Empfohlener Ram: "+pack_list[selected].recommended+"</small><br>"+pack_list[selected].launcherBody;   
+    modbody.innerHTML = "<h2>"+pack_list[selected].name+"</h2>"+"<small style=\"color: white;\">Pack Version: "+pack_list[selected].packVersion+"</small><br><small style=\"color: white;\"Recommended Ram: "+pack_list[selected].recommended+"</small><br>"+pack_list[selected].launcherBody;   
 }
-
-ipcRenderer.on('launched', () => { btn_launch.disabled = true; btn_launch.innerHTML = "Started"})     
+  
 //Launches the Instance
 btn_launch.addEventListener('click', (e) => { ipcRenderer.send('launch',[pack_list[selected].name, pack_list[selected].gameVersion, pack_list[selected].packLink, pack_list[selected].packVersion]);});
 btn_key.addEventListener('click', (e) => { ipcRenderer.send('inputCode',"true"); });  

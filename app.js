@@ -60,14 +60,7 @@ function createWindow () {
     // and load the index.html of the app.
     mainWindow.loadFile('assets/views/app.html');
 
-    // Open the DevTools.
-    // mainWindow.webContents.openDevTools()
-
-    // Emitted when the window is closed.
     mainWindow.on('closed', function () {
-        // Dereference the window object, usually you would store windows
-        // in an array if your app supports multi windows, this is the time
-        // when you should delete the corresponding element.
         mainWindow = null;
     });
 }
@@ -129,8 +122,6 @@ ipcMain.on('launch', (event, args) => {
     let opts;
     //console.log(args);
     if(packs[packName].version === args[3]){
-        //console.log(settings);
-        //console.log('not installing');
         opts = {
             authorization: Authenticator.getAuth(settings.email, settings.password),
             clientPackage: null,
@@ -190,7 +181,8 @@ ipcMain.on('launch', (event, args) => {
         setTimeout(() => {
             fs.writeFile(`C:/Users/${OSname}/Documents/.FallenKingdom/packs.json`, JSON.stringify(packs), (err) => {
                 if (err) console.log(err);
-                console.log("runs");
+                console.log("Running");
+                mainWindow.close();
             });
         },2000);
 
@@ -199,8 +191,8 @@ ipcMain.on('launch', (event, args) => {
         }
 
     launcher.on('close',() => {
-        launchable = "true";
-        consoleW.webContents.send('console-output', 'Minecraft terminated');    
+        consoleW.webContents.send('console-output', 'Minecraft terminated');
+        consoleW.close();
     });
     launcher.on('debug', (e) => {
         console.log(e)
