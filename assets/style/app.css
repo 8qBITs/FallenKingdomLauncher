@@ -178,8 +178,6 @@
 
 /* Moditem styling */
 .modItem{ 
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     left: 10px;
     right: 10px;
     height: 60px;
@@ -192,7 +190,11 @@
     margin-bottom: 10px;
 }
 
-.modItem:hover{background-color:#2980b9;color:#3498db;cursor:pointer;}
+.modItem:hover{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    cursor:pointer;
+}
 .modItem img{ margin-right:10px; }
 .modItem h2{ margin-top: -4px; color:black; }
 
