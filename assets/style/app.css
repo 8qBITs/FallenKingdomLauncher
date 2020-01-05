@@ -1,0 +1,198 @@
+*{
+    font-family: Avenir; src: url('AvenirLTStd-Medium.otf');
+}
+/* Layout Classes */
+
+
+/* Buttons */
+.btn{ background: none; border:none; }
+
+.btn_close{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    top: 5px;
+    transition: 0.2s;
+}
+
+/* Button Hover Classes */
+.btn_back:hover{ color: rgb(255, 255, 0); }
+.btn_launch:hover{ color: rgb(255, 255, 0); }
+.btn_link:hover{ color: rgb(255, 255, 0); }
+.btn_close:hover{ color: rgb(255, 255, 0); }
+.btn_store:hover{ color: rgb(255, 255, 0); }
+
+.modLayout {
+    background-color: rgb(255, 255, 255, 0.1);
+    color:white;
+    overflow-y: auto;
+    padding-right: 10px;
+    position:absolute;
+    color:white;
+    bottom: 0px;
+    left:310px;
+    right: 0px;
+    top: 40px;
+    width: auto;
+}
+
+.sideLayout {
+    overflow-y: auto;
+    position:absolute;
+    bottom: 80px;
+    left:0;
+    top:40px;
+    width: 300px;
+    height: auto;
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.key {
+    text-align: center;
+    position: absolute;
+    height: 60px;
+    border:none;
+    background-color: rgb(255, 255, 255, 0.2);
+    color:white;
+    font-size: 20px;
+    width: 100%;
+    top: 0px;
+}
+
+.topLayout{
+    position:absolute;
+    -webkit-app-region: drag;
+    left:0;
+    right: 80px;
+    top:0;
+    left: 0;
+    height: 40px;
+    width: auto;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+.topButtonLayout{
+    position:absolute;
+    top:0;
+    right: 0;
+    height: 40px;
+    width: 80px;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.bottomLayout{
+    position:absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    height: 80px;
+    width: auto;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.btn_link{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 240px;
+    transition: 0.2s;
+}
+.btn_launch{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    bottom: 20px;
+    width: 240px;
+    transition: 0.2s;
+}
+
+.btn_back{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    left: 25px;
+    bottom: 10px;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    transition: 0.2s;
+}
+
+.btn_store{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    left: 160px;
+    bottom: 10px;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    transition: 0.2s;
+}
+
+/* Moditem styling */
+.modItem{ 
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    left: 10px;
+    right: 10px;
+    height: 60px;
+    border-radius: 5px;
+    display: flex; 
+    list-style:none; 
+    color:black;
+    transition:0.2s; 
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+}
+
+.modItem:hover{background-color:#2980b9;color:#3498db;cursor:pointer;}
+.modItem img{ margin-right:10px; }
+.modItem h2{ margin-top: -4px; color:black; }
+
+/* input */
+.input{
+    background: none;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255, 0.1);
+    color: rgba(0, 0, 0);
+    width: 98%;
+    border-radius: 5px;
+}

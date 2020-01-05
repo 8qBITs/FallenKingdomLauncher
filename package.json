@@ -1,0 +1,36 @@
+{
+  "name": "FallenKingdomLauncher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "publish": "electron-builder -w --publish always",
+    "build": "electron-builder -w",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "net.fallenkingdom.launcher",
+    "icon": "assets/icons/win/icon.ico",
+    "nsis": {
+      "installerIcon": "assets/icons/win/icon.ico",
+      "uninstallerIcon": "assets/icons/win/icon.ico"
+    }
+  },
+  "author": "8qBIT",
+  "license": "ISC",
+  "dependencies": {
+    "minecraft-launcher-core": "^3.11.4",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
+    "require-from-url": "^3.1.3"
+  },
+  "devDependencies": {
+    "electron": "^6.1.5",
+    "electron-builder": "^21.2.0",
+    "electron-log": "^3.0.9",
+    "electron-updater": "^4.2.0"
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="../style/app.css">
+        <script src="https://kit.fontawesome.com/0d5e436283.js"></script>
+        <title>Main</title>
+
+        <style>
+
+        @font-face {
+            font-family: Avenir;
+            src: url('./AvenirLTStd-Medium.otf');
+        }
+
+        *{
+            font-family: Avenir;
+        }
+
+        body {
+            background-image: url('background.png');
+            background-size: cover; 
+        }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="topButtonLayout">
+            <button id="btn_close" class="btn btn_close"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="topLayout">
+            <p style="position:absolute; color:white; font-weight:bold; top:-5px; left: 10px;">FallenKingdom Launcher v1.0</p>
+        </div>
+
+        <div class="sideLayout">
+            <button id="key" class="btn key" disabled>Modpacks</button> <br><br><br>
+            <ul id="modList" style="padding: 10px 10px 10px 10px;"></ul> 
+        </div>
+
+        <div class="modLayout" id="modLayout">
+            <h1> Default Window</h1>
+        </div>
+
+        <div class="bottomLayout">            
+            <a class="btn_link" href="settings.html"> <i class="fas fa-cog"></i> Settings</a> 
+            <div style="text-align: center; width: 100%;">
+                <button id="launch" class="btn btn_launch" style="text-align: center;">Launch</button> 
+            </div>
+        </div>
+        <script>require('../js/button.js');</script>
+        <script>require('../js/app.js');</script>
+    </body>
+</html>
