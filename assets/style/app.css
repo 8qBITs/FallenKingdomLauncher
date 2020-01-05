@@ -12,6 +12,16 @@
     right: 10px;
     font-size: 20px;
     top: 5px;
+    color: gray;
+    transition: 0.2s;
+}
+
+.btn_mini{
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+    top: 5px;
+    color: gray;
     transition: 0.2s;
 }
 
@@ -20,6 +30,7 @@
 .btn_launch:hover{ color: rgb(255, 255, 0); }
 .btn_link:hover{ color: rgb(255, 255, 0); }
 .btn_close:hover{ color: rgb(255, 255, 0); }
+.btn_mini:hover{ color: rgb(255, 255, 0); }
 .btn_store:hover{ color: rgb(255, 255, 0); }
 
 .modLayout {

@@ -104,7 +104,6 @@ function importPacks(){
     return undefined;
 }
 
-
 try {
     importSettings();
     importPacks();
@@ -186,8 +185,12 @@ ipcMain.on('launch', (event, args) => {
         
         setTimeout(() => {
             fs.writeFile(`C:/Users/${OSname}/Documents/.FallenKingdom/packs.json`, JSON.stringify(packs), (err) => {
-                if (err) console.log(err);
-                consoleW.webContents.send('console-output', 'Downloading assets..')
+                if (err) console.log(err); 
+                if(settings.console == 'true') {
+                    consoleW.webContents.send('console-output', 'Loading Modpack Data..')
+                } else {
+                    // some other way to notify user about game starting
+                }
                 mainWindow.close();
             });
         },2000);
