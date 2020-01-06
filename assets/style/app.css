@@ -37,6 +37,7 @@
     background-color: rgb(255, 255, 255, 0.1);
     color:white;
     overflow-y: auto;
+    padding-left:10px;
     padding-right: 10px;
     position:absolute;
     color:white;
