@@ -3,7 +3,6 @@
 }
 /* Layout Classes */
 
-
 /* Buttons */
 .btn{ background: none; border:none; }
 
@@ -12,7 +11,7 @@
     right: 10px;
     font-size: 20px;
     top: 5px;
-    color: gray;
+    color: rgb(255, 255, 255);
     transition: 0.2s;
 }
 
@@ -21,17 +20,9 @@
     right: 40px;
     font-size: 20px;
     top: 5px;
-    color: gray;
+    color: rgb(255, 255, 255);
     transition: 0.2s;
 }
-
-/* Button Hover Classes */
-.btn_back:hover{ color: rgb(255, 255, 0); }
-.btn_launch:hover{ color: rgb(255, 255, 0); }
-.btn_link:hover{ color: rgb(255, 255, 0); }
-.btn_close:hover{ color: rgb(255, 255, 0); }
-.btn_mini:hover{ color: rgb(255, 255, 0); }
-.btn_store:hover{ color: rgb(255, 255, 0); }
 
 .modLayout {
     background-color: rgb(0, 0, 0, 0.2);
@@ -134,9 +125,22 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
-    width: 240px;
+    width: 25x;
     transition: 0.2s;
 }
+
+.btn_discord{
+    background-color: rgb(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 285px;
+    width: 25x;
+}
+
 .btn_launch{
     background-color: rgb(0, 0, 0, 0.7);
     color: rgb(255, 255, 255);
@@ -145,8 +149,9 @@
     padding: 10px 10px 10px 10px;
     position: absolute;
     bottom: 20px;
-    width: 240px;
+    width: 205px;
     transition: 0.2s;
+    left: 70px;
 }
 
 .btn_back{
@@ -165,7 +170,7 @@
     background-color: rgb(0, 0, 0, 0.7);
     color: rgb(255, 255, 255);
     font-size: 20px;
-    left: 160px;
+    left: 120px;
     bottom: 20px;
     text-decoration: none;
     padding: 10px 10px 10px 10px;
@@ -173,7 +178,24 @@
     transition: 0.2s;
 }
 
+/* Button Hover Classes */
+.btn_back:hover{ color: rgb(102, 102, 102); }
+.btn_launch:hover{ color: rgb(102, 102, 102); }
+.btn_link:hover{ color: rgb(102, 102, 102); }
+.btn_discord:hover{ color: #7289da; }
+.btn_close:hover{ color: rgb(102, 102, 102); }
+.btn_mini:hover{ color: rgb(102, 102, 102); }
+.btn_store:hover{ color: rgb(102, 102, 102); }
 /* Moditem styling */
+
+.modInfo{ 
+    border-radius: 5px;
+    display: flex; 
+    list-style:none; 
+    color:black; 
+    padding: 10px 10px 10px 10px;
+}
+
 .modItem{ 
     left: 10px;
     right: 10px;
