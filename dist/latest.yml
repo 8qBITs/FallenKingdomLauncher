@@ -1,8 +1,8 @@
 version: 1.2.0
 files:
   - url: FallenKingdomLauncher-Setup-1.2.0.exe
-    sha512: ovUcWMDLn4D8yx+tcvy9/st0Bjq4uE+CE7InP9zFNVq4h4wOEp8UaVL8SZEaST4c9bJgQ551bNi2INqTWk5htQ==
-    size: 46300052
+    sha512: eA7aXmh7Nukm0hxGU4uXmTP3ysf281W/1TIvqQwIW7MclmO5RxagRZ95UgoCRpQrFUUYpQ9mm3JpfXEg3VpaOQ==
+    size: 46300395
 path: FallenKingdomLauncher-Setup-1.2.0.exe
-sha512: ovUcWMDLn4D8yx+tcvy9/st0Bjq4uE+CE7InP9zFNVq4h4wOEp8UaVL8SZEaST4c9bJgQ551bNi2INqTWk5htQ==
-releaseDate: '2020-01-06T11:39:48.312Z'
+sha512: eA7aXmh7Nukm0hxGU4uXmTP3ysf281W/1TIvqQwIW7MclmO5RxagRZ95UgoCRpQrFUUYpQ9mm3JpfXEg3VpaOQ==
+releaseDate: '2020-01-06T11:47:30.524Z'
