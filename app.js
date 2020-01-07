@@ -1,6 +1,7 @@
 const { shell, Client, Authenticator } = require('minecraft-launcher-core');
 const {app, BrowserWindow,ipcMain, dialog} = require('electron');
 const request = require('request');
+const exec = require('child_process').exec;
 const host = require('./assets/config/app.json');
 
 const fs = require('fs');
@@ -202,6 +203,9 @@ ipcMain.on('launch', (event, args) => {
     launcher.on('close',() => {
         consoleW.webContents.send('console-output', 'Minecraft terminated');
         consoleW.close();
+        // Start launcher again
+        exec(process.execPath);
+        app.quit();
     });
     launcher.on('debug', (e) => {
         console.log(e)
